@@ -1,0 +1,985 @@
+@import "./variables";
+@import "./mixins";
+@import "./header";
+@import "./people";
+@import "./revolutionary";
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+span {
+    display: block;
+}
+
+body {
+    @include MontserratFont;
+}
+
+.inactive {
+    display: none;
+}
+
+@media (width: 320px){
+
+    .container {
+        padding-right: 10px;
+        padding-left: 10px;
+/*         border: 1px solid blue; */
+        max-width: 320px;
+        
+    }
+    
+    .header {
+        
+        width: 320px;
+        /* border: 1px solid red; */
+        /* text-align: center; */
+        background-color: #27262A;
+        
+        .nav {
+            height: 103px;
+            /* border: 1px solid purple; */
+
+            .top-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 10px;
+                width: 100%;
+
+                .buy-now-btn {
+                    width: 119px;
+                    height: 37px;
+                    background-color: $btnBackground;
+                    border-radius: 40px;
+                    padding-top: 11px;
+                    @include fontParameters(700, 15px, 15px, $btnColor);
+                    &:hover {
+                        background-color: $btnBackgroundHover;
+                        color: $btnColorHover;
+                    }
+                }
+    
+                .forkio {
+                    display: none;
+                }
+
+                .burger-menu-logo {
+                    cursor: pointer;
+                    @include menuLogo;
+                    
+                    
+        
+                }
+        
+                .x {
+                    cursor: pointer;
+                    @include menuLogo;
+                }
+
+
+
+            }
+    
+            .bottom-container {
+                display: none;
+            }
+    
+
+    
+    
+            
+        }
+    
+    }
+    
+    .burger-menu {
+        top: 0;
+        left: 13px;
+        width: 292px;
+        height: 364px;
+        position: absolute;
+        background-color: #333333;
+    
+        .item {
+            @include fontParameters (400, 26px, 26px, $btnColor);
+            &:hover {
+                color: $btnColorHover;
+            }
+            display: block;        
+            height: 88px;
+            padding-top: 29px;
+            border-bottom: 3px solid #3a3a3a;
+            color: $btnColor;
+        }
+    }
+    
+    
+    
+    .section-one {
+        position: relative;
+        min-width: 320px;
+        text-align: center;
+        .img {
+            /* border: 1px solid gold; */
+            height: 614px;
+            background-image: url(./img/img3.png);
+            background-position: center;  
+            background-size: contain;
+        
+            
+            .title {
+                @include fontParameters(700, 48px, 48px, #FFFFFF);
+                /* margin-top: 50px; */
+            }   
+        
+            .subtitle {
+                @include fontParameters(400, 18px, 24px, #8D81AC);
+                margin-top: 19px;
+            }
+        
+            .system {
+                @include fontParameters(400, 14px, 14px, #848E97);
+                margin-top: 14px;
+                display: block;
+                text-transform: uppercase;
+            }
+    
+    
+        }
+    
+    }
+    
+    .download-btn {
+        position: absolute;
+        top: 590px;
+        right: 14px;
+        width: 290px;
+        height: 45px;
+        padding-top: 13px;
+        background-color: $btnBackground;
+        border-radius: 40px;
+        @include fontParameters(700, 18px, 20px, $btnColor);
+        &:hover {
+            background-color: $btnBackgroundHover;
+            color: $btnColorHover;
+        }
+    
+    }
+    
+    .unlimited {
+        margin-top: 36px;
+        @include fontParameters(400, 14px, 14px, #848E97)
+    }
+
+    .people-are-talking {
+        border: 1px solid red;
+        width: 320px;
+        /* height: 1610px; */
+        padding-top: 57px;    
+        background-image: url("/img/testmonials-bg320.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        /* background-color: #A291A5; */
+    
+        .title {
+            @include fontParameters(700, 36px, 48px, #FFFFFF);
+            margin-bottom: 53px;
+        }
+    
+        .grid-container {
+            border: 1px solid blue;
+            height: 1175px;
+            
+            
+    
+            .item {
+                border: 1px solid red;
+                height: 162px;
+                margin-bottom: 45px;
+                
+                .logo1 {
+                    width: 165px;
+                    height: 43px;
+                }
+    
+                .logo2 {
+                    width: 148px;
+                    height: 50px;
+                }
+    
+                .logo3 {
+                    width: 64px;
+                    height: 64px;
+                }
+    
+                .logo4 {
+                    width: 225px;
+                    height: 24px;
+                }
+    
+                .logo5 {
+                    width: 166px;
+                    height: 34px;
+                }
+    
+                .logo6 {
+                    width: 108px;
+                    height: 34px;
+                }
+    
+                .text {
+                    margin: auto;
+                    margin-top: 33px;
+                    @include LatoFont;
+                    @include fontParameters (700, 16px, 24px, #FFFFFF);
+                }
+    
+                .text1 {
+                    margin-top: 33px;
+    
+                }
+    
+                .text2 {
+                    
+                    width: 266px;
+                    height: 83px;
+                    
+                    margin-top: 29px;
+    
+                }
+    
+                .text3 {
+    
+                    width: 245px;
+                    height: 85px;
+                    margin-top: 22px;
+    
+                }
+    
+                .text4 {
+                    width: 271px;
+                    height: 86px;
+                    margin-top: 33px;
+    
+                }
+    
+                .text5 {
+                    width: 280px;
+                    height: 85px;
+                    margin-top: 28px;
+    
+                }
+    
+                .text6 {
+                    width: 246px;
+                    height: 107px;
+                    margin-top: 24px;
+    
+                }
+            }
+    
+    
+        }
+    
+        .note {
+            @include LatoFont;
+            @include fontParameters (400, 14px, 21px, #A291A5);
+            margin: auto;
+            margin-top: 47px;
+            margin-bottom: 22px;
+            width: 251px;
+            height: 150px;
+            &::after {
+                content: "";
+                display: block;
+                margin-top: 22px;
+                border-bottom: 2px solid #A291A5;
+            }
+        }
+    }
+
+}
+
+
+
+@media (width: 768px) {
+    .container {
+        padding-right: 10px;
+        padding-left: 10px;
+        /* border: 1px solid blue; */
+        /* min-width: 768px; */        
+    }
+    
+    .header {        
+        min-width: 320px;
+        /* border: 1px solid red; */
+        text-align: center;
+        background-color: #27262A;
+        
+        .nav {
+            height: 118px;
+            padding-top: 22px;
+            /* border: 1px solid purple; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            .top-container {
+                /* border: 1px solid blue; */
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+
+                .logo {
+                    margin-left: 10px;
+                }
+
+                .forkio {
+                    text-transform: uppercase;                    
+                    @include LatoFont;
+                    @include fontParameters (700, 24px, 16px, #8D81AC);
+                    margin-right: 410px;
+                }
+        
+                .buy-now-btn {
+                    width: 145px;
+                    height: 38px;
+                    margin-right: 10px;
+                    background-color: $btnBackground;
+                    border-radius: 40px;
+                    padding-top: 11px;
+                    @include fontParameters(700, 15px, 15px, $btnColor);
+                    &:hover {
+                        background-color: $btnBackgroundHover;
+                        color: $btnColorHover;
+                    }
+                }              
+            }
+
+            .bottom-container {
+                .menu {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 18px;
+                    .item{
+                        @include fontParameters (700, 16px, 18px, #8D81AC);
+                        &:hover {
+                            color: $btnBackgroundHover;
+                        }
+                    }
+                } 
+            }
+
+            .menu {
+                display: flex;
+                /* border: 1px solid red; */
+                width: 517px;
+                .item {
+                    display: block;
+                }
+            }
+    
+            .burger-menu-logo {
+                cursor: pointer;
+                @include menuLogo;
+                display: none;
+            }
+    
+            .x {
+                cursor: pointer;
+                @include menuLogo;
+                display: none;
+            }           
+        }    
+    }
+    
+    .section-one {
+        position: relative;
+        min-width: 320px;
+        text-align: center;
+        .img {
+            /* border: 1px solid gold; */
+            height: 702px;
+            background-image: url(./img/main-img.png);
+            background-position: top;  
+            background-size: cover;
+            background-repeat: no-repeat;
+        
+            
+            .title {
+                @include fontParameters(700, 72px, 72px, #FFFFFF);
+                /* margin-top: 69px; */
+            }   
+        
+            .subtitle {
+                @include LatoFont;
+                @include fontParameters(400, 24px, 24px, #8D81AC);
+                margin-top: 19px;
+            }
+        
+            .system {
+                @include fontParameters(400, 14px, 14px, #848E97);
+                margin-top: 19px;
+                display: block;
+                text-transform: uppercase;
+            }    
+        }    
+    }
+    
+    .download-btn {
+        position: absolute;
+        top: 668px;
+        right: 190px;
+        width: 390px;
+        height: 62px;
+        padding-top: 23px;
+        background-color: $btnBackground;
+        border-radius: 40px;
+        @include fontParameters(700, 21px, 23px, $btnColor);
+        &:hover {
+            background-color: $btnBackgroundHover;
+            color: $btnColorHover;
+        }
+    
+    }
+    
+    .unlimited {
+        margin-top: 48px;
+        @include fontParameters(400, 14px, 16px, #848E97)
+    }
+
+    .people-are-talking {
+        border: 1px solid #645766;
+        width: 100%;
+        padding-top: 86px;    
+        background-image: url("/img/testimonials-bg768.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        
+    
+        .title {
+            @include fontParameters(700, 42px, 44px, #FFFFFF);
+            margin-bottom: 88px;
+        }
+    
+        .grid-container {
+            /* border: 1px solid blue; */
+            width: auto;
+            height: 524px;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            
+            
+    
+            .item {
+                /* border: 1px solid red; */
+                height: auto;
+                width: auto;
+                margin: 0;
+
+                
+                
+                .logo1 {
+                    width: 165px;
+                    height: 43px;
+                    margin-bottom: 33px;
+                }
+    
+                .logo2 {
+                    width: 148px;
+                    height: 50px;
+                    margin-bottom: 29px;
+                }
+    
+                .logo3 {
+                    width: 64px;
+                    height: 64px;
+                    margin-bottom: 22px;
+                }
+    
+                .logo4 {
+                    width: 225px;
+                    height: 24px;
+                    margin-top: 24px;
+                    margin-bottom: 33px;
+                }
+    
+                .logo5 {
+                    width: 166px;
+                    height: 34px;
+                    margin-bottom: 22px;
+                }
+    
+                .logo6 {
+                    width: 108px;
+                    height: 34px;
+                    margin-bottom: 30px;
+                }
+    
+                .text {
+                    margin: 0;
+                    width: auto;
+                    height: auto;
+                    /* margin: auto; */
+                    /* margin-top: 33px; */
+                    @include LatoItalic;
+                    @include fontParameters (700, 16px, 24px, #FFFFFF);
+                }
+    
+                .text1 {
+                    margin: 0;
+                    width: auto;
+                    height: auto;
+/*                     width: 345px;
+                    height: 62px; */
+                   /*  margin-top: 33px; */
+    
+                }
+    
+                .text2 {
+                    margin: 0;
+                    width: auto;
+                    height: auto;
+              /*       width: 354px;
+                    height: 61px; */
+                    
+                    /* margin-top: 29px; */
+    
+                }
+    
+                .text3 {
+                    margin: 0;
+                    width: auto;
+                    height: auto;
+              /*       width: 336px;
+                    height: 62px; */
+                    /* margin-top: 22px; */
+    
+                }
+    
+                .text4 {
+                    margin: 0;
+                    width: auto;
+                    height: auto;
+              /*       width: 345px;
+                    height: 62px; */
+                    /* margin-top: 33px; */
+    
+                }
+    
+                .text5 {
+                    margin: 0;
+                    width: auto;
+                    height: auto;
+                 /*    width: 348px;
+                    height: 62px; */
+                    /* margin-top: 28px; */
+    
+                }
+    
+                .text6 {
+                    margin: 0;
+                    width: auto;
+                    height: auto;
+               /*      width: 343px;
+                    height: 59px;
+                     */
+    
+                }
+            }
+    
+    
+        }
+    
+        .note {
+            @include LatoFont;
+            @include fontParameters (400, 14px, 21px, #A291A5);
+            margin: auto;
+            margin-top: 77px;
+            margin-bottom: 28px;
+            width: 704px;
+            height: 56px;
+            &::after {
+                content: "";
+                display: block;
+                margin: auto;
+                margin-top: 19px;
+                width: 555px;
+                border-bottom: 2px solid #A291A5;
+            }
+        }
+    }
+
+
+
+
+
+}
+
+@media (width: 1200px) {
+    .container {
+        padding-right: 10px;
+        padding-left: 10px;
+        /* border: 1px solid blue; */
+        width: 1380px;
+        /* min-width: 768px; */        
+    }
+    
+    .header {        
+        width: 1380px;
+        /* border: 1px solid red; */
+        text-align: center;
+        background-color: black;
+        /* border: 1px solid black; */
+        
+        .nav {
+            position: relative;
+            height: 71px;
+            padding-top: 22px;
+            padding-bottom: 22px;
+            /* border: 1px solid purple; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            .top-container {
+                /* border: 1px solid blue; */
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+
+                .logo {
+                    width: 43px;
+                    height: 41px;
+                    margin-left: 80px;
+                }
+
+                .forkio {
+                    text-transform: uppercase;                    
+                    @include LatoFont;
+                    @include fontParameters (700, 24px, 16px, #8D81AC);
+                    margin-top: 8px;
+                    margin-right: 880px;
+                }
+        
+                .buy-now-btn {
+                    width: 145px;
+                    height: 37px;
+                    margin-right: 80px;
+                    background-color: $btnBackground;
+                    border-radius: 40px;
+                    padding-top: 11px;
+                    @include fontParameters(700, 16px, 17px, $btnColor);
+                    &:hover {
+                        background-color: $btnBackgroundHover;
+                        color: $btnColorHover;
+                    }
+                }              
+            }
+
+            .bottom-container {
+                position: absolute;
+                top: 35px;
+                left: 560px;
+                width: 517px;
+                .menu {
+                    
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    /* margin-bottom: 18px; */
+                    .item{
+                        @include fontParameters (700, 16px, 17px, #8D81AC);
+                        &:hover {
+                            color: $btnBackgroundHover;
+                        }
+                    }
+                } 
+            }
+
+            .menu {
+                display: flex;
+                /* border: 1px solid red; */
+                width: 517px;
+                .item {
+                    display: block;
+                }
+            }
+    
+            .burger-menu-logo {
+                cursor: pointer;
+                @include menuLogo;
+                display: none;
+                
+
+            }
+    
+            .x {
+                cursor: pointer;
+                @include menuLogo;
+                display: none;
+            }           
+        }    
+    }
+    
+    .section-one {
+        position: relative;
+        min-width: 320px;
+        width: 1380px;
+        
+        
+        text-align: center;
+        .img {
+            /* border: 1px solid gold; */
+            padding-top: 113px;
+            
+            height: 730px;
+            background-image: url(./img/main-img.png);
+            background-position: center;  
+            background-size: cover;
+            /* background-repeat: no-repeat; */
+        
+            
+            .title {
+                @include fontParameters(700, 82px, 82px, #FFFFFF);
+                margin: 0;
+            }   
+        
+            .subtitle {
+                @include LatoFont;
+                @include fontParameters(400, 30px, 30px, #8D81AC);
+                margin-top: 19px;
+            }
+        
+            .system {
+                @include fontParameters(400, 16px, 16px, #848E97);
+                margin-top: 19px;
+                display: block;
+                text-transform: uppercase;
+            }    
+        }    
+    }
+    
+    .download-btn {
+        position: absolute;
+        top: 700px;
+        right: 490px;
+        width: 390px;
+        height: 62px;
+        padding-top: 23px;
+        background-color: $btnBackground;
+        border-radius: 40px;
+        @include fontParameters(700, 21px, 22px, $btnColor);
+        &:hover {
+            background-color: $btnBackgroundHover;
+            color: $btnColorHover;
+        }
+    
+    }
+    
+    .unlimited {
+        margin-top: 48px;
+        @include fontParameters(400, 14px, 16px, #848E97)
+    }
+
+
+
+    
+    .people-are-talking {
+        border: 1px solid #645766;
+        width: 1380px;
+        height: 100%;
+        padding-top: 108px;    
+        background-image: url("/img/people-are-talking-bg.png");
+        background-repeat: no-repeat;
+        background-size: 150%;
+        background-position: center;
+
+        
+        
+        
+    
+        .title {
+            @include fontParameters(700, 48px, 50px, #FFFFFF);
+            margin-bottom: 82px;
+        }
+    
+        .grid-container {
+            /* border: 1px solid blue; */
+            width: auto;
+            height: 524px;
+            margin-left: 71px;
+            margin-right: 71px;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 116px 87px;
+            
+            
+    
+            .item {
+                /* border: 1px solid red; */
+                height: auto;
+                width: auto;
+                margin: 0;
+
+                
+                
+                .logo1 {
+                    width: 165px;
+                    height: 43px;
+                    margin-bottom: 33px;
+                }
+    
+                .logo2 {
+                    width: 148px;
+                    height: 50px;
+                    margin-bottom: 29px;
+                }
+    
+                .logo3 {
+                    width: 64px;
+                    height: 64px;
+                    margin-bottom: 22px;
+                }
+    
+                .logo4 {
+                    width: 225px;
+                    height: 24px;
+                    margin-top: 24px;
+                    margin-bottom: 33px;
+                }
+    
+                .logo5 {
+                    width: 166px;
+                    height: 34px;
+                    margin-bottom: 22px;
+                }
+    
+                .logo6 {
+                    width: 108px;
+                    height: 34px;
+                    margin-bottom: 30px;
+                }
+    
+                .text {
+                    margin: 0;
+                    width: auto;
+                    height: auto;
+                    /* margin: auto; */
+                    /* margin-top: 33px; */
+                    @include LatoItalic;
+                    @include fontParameters (700, 16px, 24px, #FFFFFF);
+                }
+    
+                .text1 {
+                    margin: 0;
+                    width: auto;
+                    height: auto;
+/*                     width: 345px;
+                    height: 62px; */
+                   /*  margin-top: 33px; */
+    
+                }
+    
+                .text2 {
+                    margin: 0;
+                    width: auto;
+                    height: auto;
+              /*       width: 354px;
+                    height: 61px; */
+                    
+                    /* margin-top: 29px; */
+    
+                }
+    
+                .text3 {
+                    margin: 0;
+                    width: auto;
+                    height: auto;
+              /*       width: 336px;
+                    height: 62px; */
+                    /* margin-top: 22px; */
+    
+                }
+    
+                .text4 {
+                    margin: 0;
+                    width: auto;
+                    height: auto;
+              /*       width: 345px;
+                    height: 62px; */
+                    /* margin-top: 33px; */
+    
+                }
+    
+                .text5 {
+                    margin: 0;
+                    width: auto;
+                    height: auto;
+                 /*    width: 348px;
+                    height: 62px; */
+                    /* margin-top: 28px; */
+    
+                }
+    
+                .text6 {
+                    margin: 0;
+                    width: auto;
+                    height: auto;
+               /*      width: 343px;
+                    height: 59px;
+                     */
+    
+                }
+            }
+    
+    
+        }
+    
+        .note {
+            @include LatoFont;
+            @include fontParameters (400, 14px, 21px, #A291A5);
+            margin: auto;
+            margin-top: 119px;
+            margin-bottom: 25px;
+            width: 887px;
+            height: auto;
+            height: 37px;
+            &::after {
+                content: "";
+                /* display: block; */
+                margin: auto;
+                margin-top: 18px;
+                /* margin-bottom: 0; */
+                
+                width: 780px;
+                border-bottom: 2px solid #A291A5;
+            }
+        }
+    }
+
+
+
+}
+
+

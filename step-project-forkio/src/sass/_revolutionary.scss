@@ -1,0 +1,173 @@
+@import "./variables";
+@import "./mixins";
+
+
+@media (max-width: 480px){
+    .h1{
+        @include MontserratFont;
+        @include fontParameters ($fw: 700, $fs: 26px, $lh: 28px, $color: #635C73);
+        text-align: center;
+        text-transform: uppercase;
+        margin: 80px 0 27px 0;
+    }
+    .lato-span{
+        @include LatoFont;
+        @include fontParameters ($fw: 400, $fs: 14px, $lh: 20px, $color: #323232);
+        text-align: center;
+        margin-bottom: 36px;
+    }
+    .btns{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+        margin-bottom: 120px;
+        .btns__item{
+            border: 1px solid gray;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #24292F;
+            display: flex;
+            background-color: #c5cace ;
+            .btns__item_background{
+                
+                display: flex;
+                padding: 5px;
+                
+                .btns__item__text{
+                    font-weight: bold;
+                    color: #24292F;
+                    margin-left: 3px;
+                }
+            }
+            .btns__item__num{
+                border-left: 1px solid gray;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5px;
+                background-color: #F6F8FA;
+                border-radius: 0 5px 5px 0;
+            }
+        }
+    }
+    .container_here-is{
+        text-align: center;
+        .here-is {
+            @include MontserratFont;
+            @include fontParameters ($fw: 700, $fs: 32px, $lh: 38px, $color: #8D81AC);
+            text-align: center;
+            margin-bottom: 36px;
+        }
+        .here-is-img-title {
+            @include MontserratFont;
+            @include fontParameters ($fw: 400, $fs: 16px, $lh: 16px, $color: #323232);
+            margin: {
+                top: 27px;
+                bottom: 14px;
+            }
+        }
+        .here-is-text{
+            @include LatoFont;
+            @include fontParameters ($fw: 400, $fs: 14px, $lh: 21px, $color: #848E97);
+            text-align: center;
+            margin-bottom: 28px;
+        }
+        
+    }
+    .fork-title{
+        @include MontserratFont;
+        @include fontParameters ($fw: 700, $fs: 28px, $lh: 42px, $color: #ffffff);
+        text-align: center;
+        margin: {
+            top: 14px;
+            bottom: 32px;
+        }
+    }
+    .cards {
+        
+        
+        .cards__item{
+            &:not(:last-child){
+                margin-bottom: 18px;
+            }
+            .cards__item__title,
+            .cards__item__title_dark {
+                @include MontserratFont;
+                @include fontParameters ($fw: 400, $fs: 24px, $lh: 24px, $color: #ffffff);
+                padding: 39px 60px;
+                margin: 0 auto;
+            }
+            .cards__item__title{
+                width: 257px;
+                background-color: rgb(255, 255, 255, 0.06);
+            }
+            .cards__item__title_dark{
+                width: 299px;
+                background-color: rgb(0, 0, 0, 0.11);
+            }
+            
+            .cards__item__data,
+            .cards__item__data_dark {
+                @include MontserratFont;
+                @include fontParameters ($fw: 400, $fs: 24px, $lh: 24px, $color: #ffffff);
+                padding: 30px 47px 67px 47px;
+                margin: 0 auto;
+                .cards__item__price{
+                    @include MontserratFont;
+                    @include fontParameters ($fw: 400, $fs: 60px, $lh: 62px, $color: #ffffff);
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+                .cards__item__per-month{
+                    @include MontserratFont;
+                    @include fontParameters ($fw: 400, $fs: 14px, $lh: 16px, $color: #ffffff);
+                    text-align: center;
+                    text-transform: uppercase;
+                    margin-top: 20px;
+                    &::after {
+                        content: "";
+                        display: block;
+                        height: 2px;
+                        width: 60px;
+                        background-color: #8D81AC;
+                        margin: {
+                            top: 38px;
+                            bottom: 30px;
+                            left: auto;
+                            right: auto;
+                        }
+                    }
+                }
+                
+                .cards__item__personal-licence{
+                    @include MontserratFont;
+                    @include fontParameters ($fw: 400, $fs: 16px, $lh: 18px, $color: #ffffff);
+                    margin-top: 30px;
+                    text-align: center;
+                }
+                .cards__item__button{
+                    @include MontserratFont;
+                    @include fontParameters ($fw: 400, $fs: 15px, $lh: 15px, $color: #ffffff);
+                    display: block;
+                    text-decoration: none;
+                    padding: 15px 38px;
+                    border-radius: 30px;
+                    width: 163px;
+                    background-color: rgb(255, 255, 255, 0.15);
+                    text-align: center;
+                    text-transform: uppercase;
+                    margin: 37px auto 0 auto;
+                }
+            }
+            .cards__item__data{
+                width: 257px;
+                background-color: rgb(255, 255, 255, 0.11);
+            }
+            .cards__item__data_dark{
+                width: 299px;
+                background-color: rgba(60, 45, 61, 0.84);
+            }
+        }
+    }
+}

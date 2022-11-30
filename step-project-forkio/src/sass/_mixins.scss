@@ -1,0 +1,69 @@
+@mixin MontserratFont {
+    font-family: 'Montserrat';
+    font-style: normal;
+}
+
+@mixin LatoFont {
+    font-family: 'Lato';
+    font-style: normal;
+}
+
+@mixin LatoItalic {
+    font-family: 'Lato';
+    font-style: italic;
+}
+
+@mixin fontParameters ($fw, $fs, $lh, $color){
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    color: $color;
+}
+
+@mixin menuLogo {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+
+/* @mixin pageFont {
+    font-family: 'Montserrat';
+    font-style: normal;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin logo ($color) {
+    border: 3px solid $color;
+}
+
+@mixin p-touch-margin {
+    margin-left: 239px;
+    margin-right: 239px;
+    margin-top: 22px;
+    margin-bottom: 37px;
+}
+
+@mixin p-touch-margin320 {
+    margin-left: 35px;
+    margin-right: 35px;
+
+}
+
+@mixin fontParameters ($fw, $fs, $lh, $color){
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    color: $color;
+}
+
+@mixin backgroundImg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+} */
